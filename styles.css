@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+    /* height: 100vh;
+    width: 90%; */
+    box-sizing: border-box;
+    font-family: "Raleway";
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+.body {
+    height: 100vh;
+    position: relative;
+    width: 100vw; 
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body::after {
+    background: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    right: 0;
+    bottom: 0;
+}
+.parent {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    /* align-items: ; */
+    /* margin:  290px 0 0 310px; */
+
+}
+.one {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 300px;
+    border-radius: 5px;
+    border-top-right-radius: 85px;
+    background-color: hsl(228, 56%, 26%);
+    margin-right: 25px;
+    padding: 35px 110px 0px 35px;
+}
+.two {
+    height: 140px;
+    width: 480px;
+    border-radius: 6px;
+    margin-top: 40px;
+    background-color: hsl(228, 56%, 26%);
+}
+.logo {
+    height: 40px;
+    width: 140px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.doc {
+    height: 45px;
+    width: 45px;
+    padding: 12px;
+    margin-top: 14px;
+    border-radius: 9px;
+    background-color: hsl(229, 57%, 11%);
+}
+.two {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    position: relative;
+}
+.text{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin: 25px 0 15px 35px;
+}
+span {
+    font-weight: 700;
+}
+.progress{
+    width: 410px;
+    height: 18px;
+    border-radius: 50px;
+    background: hsl(229, 57%, 11%);
+    margin: 0 0 5px 35px;
+    overflow: hidden;
+    padding: 2px;
+}
+.slider {
+    height: 100%;
+    width: 81.5%;
+    background:linear-gradient(to right, hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    border-radius: 50px;
+    position: relative;
+}
+
+.slider:after {
+    content: '';
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    right: 2px;
+}
+.gb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 0px 35px;
+    width: 410px;
+    font-weight: 400;
+    font-weight: 15px;
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+}
+.note {
+    /* display: flex;
+    justify-content: center; */
+    /* height: 55px; */
+    /* width: 140px; */
+    border-radius: 5px 5px 0 5px;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    bottom: 120px;
+    left: 283px; 
+    border: 1px solid hsl(229, 57%, 11%);
+    font-size: 40px;
+    font-weight: 700;
+    color: hsl(229, 57%, 11%);
+    text-align: center;
+    padding: 8px 18px;
+    z-index: 2;
+} 
+
+.note:after {
+    content: '';
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    border-width: 0 21px 21px 0 ;   
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    filter: drop-shadow(1px 2px 0px hsl(229, 57%, 11%));
+
+}
+
+.note:before {
+    /* content: ''; */
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    bottom: -26px;
+    right: -1px;
+    border: 13px solid hsl(228, 56%, 26%);
+    border-top-color: hsl(229, 57%, 11%);
+    border-right-color: hsl(229, 57%, 11%);
+}
+.light {
+    font-size: 12px;
+}
+@media screen and (max-width: 700px){
+    .body::after {
+        background-image: url("./images/bg-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    .parent {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .two {
+        height: 180px;
+        width: 300px;
+    }
+    .gb {
+        width: 240px;
+    }
+    .progress {
+        width: 240px;
+    }
+    .note {
+        position: relative;
+        top: 39px;
+        bottom: 0px;
+        left: 60px;
+        right: 0px;
+        width: 170px;
+        border-radius: 5px 5px 5px 5px;
+
+    }
+    .note:after {
+        display: none;
+    }
+}
